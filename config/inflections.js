@@ -1,0 +1,24 @@
+var inflections = {};
+
+var Issue = {"filename":{"singular":"issue","plural":"issues"},"constructor":{"singular":"Issue","plural":"Issues"},"property":{"singular":"issue","plural":"issues"}};
+inflections['issue'] = Issue;
+inflections['issues'] = Issue;
+inflections['Issue'] = Issue;
+inflections['Issues'] = Issue;
+inflections['issue'] = Issue;
+inflections['issues'] = Issue;
+var Action = {"filename":{"singular":"action","plural":"actions"},"constructor":{"singular":"Action","plural":"Actions"},"property":{"singular":"action","plural":"actions"}};
+inflections['action'] = Action;
+inflections['actions'] = Action;
+inflections['Action'] = Action;
+inflections['Actions'] = Action;
+inflections['action'] = Action;
+inflections['actions'] = Action;
+var Project = {"filename":{"singular":"project","plural":"projects"},"constructor":{"singular":"Project","plural":"Projects"},"property":{"singular":"project","plural":"projects"}};
+inflections['project'] = Project;
+inflections['projects'] = Project;
+inflections['Project'] = Project;
+inflections['Projects'] = Project;
+inflections['project'] = Project;
+inflections['projects'] = Project;
+module.exports = inflections;

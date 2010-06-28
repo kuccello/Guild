@@ -1,0 +1,52 @@
+<% var items = params.items; %>
+<html>
+  <head>
+    <link type="text/css" rel="stylesheet" href="/css/master.css"/>
+  </head>
+  <body>
+    <p>
+      <a href="/actions/add">Create new item</a>
+    <p>
+    <h3>
+      Actions    </h3>
+      <% if (!items.length) { %>
+        (No items)
+      <% } else { %>
+        <table>
+        <tr>
+        <% for (var p in items[0].properties) { %>
+          <th>
+            <%= p; %> 
+          </th>
+        <% } %>
+          <th>
+            &nbsp;
+          </th>
+        </tr>
+        <% 
+          var item;
+          for (var i = 0, ii = items.length; i < ii; i++) {
+          item = items[i];
+        %>
+          <tr>  
+            <% for (var p in item.properties) { %>
+              <td>
+                <%= item[p] || '&nbsp;'; %> 
+              </td>
+            <% } %>
+              <td>
+                <a href="/actions/<%= item.id %>">[show]</a>
+                <a href="/actions/<%= item.id %>/edit">[edit]</a>
+                <form method="post" action="/actions/<%= item.id %>?_method=delete"
+                    style="display: inline;"
+                    onclick="if (!window.confirm('Delete?')) {return false;}">
+                  <input type="submit" value="delete"/>
+                </form>
+              </td>
+          </tr>
+        <% } %>
+        </table>
+      <% } %>
+  </body>
+</html>
+

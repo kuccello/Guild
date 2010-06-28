@@ -1,0 +1,5 @@
+<form id="modelItemForm" method="post" action="<%= params.formAction %>" onsubmit="validateSubmit(); return false;">
+<div>Title</div>
+<div><input type="text" id="title" name="title" value="<%= params.title || '' %>" size="24"/></div>
+<input type="submit" value="Submit"/>
+</form>

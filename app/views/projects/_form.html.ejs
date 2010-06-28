@@ -1,0 +1,15 @@
+<form id="modelItemForm" method="post" action="<%= params.formAction %>" onsubmit="validateSubmit(); return false;">
+<div>Name</div>
+<div><input type="text" id="name" name="name" value="<%= params.name || '' %>" size="24"/></div>
+<div>Github_user_id</div>
+<div><input type="text" id="github_user_id" name="github_user_id" value="<%= params.github_user_id || '' %>" size="24"/></div>
+<div>Github_token</div>
+<div><input type="text" id="github_token" name="github_token" value="<%= params.github_token || '' %>" size="24"/></div>
+<div>Github_project_id</div>
+<div><input type="text" id="github_project_id" name="github_project_id" value="<%= params.github_project_id || '' %>" size="24"/></div>
+<div>Pivitol_project_id</div>
+<div><input type="text" id="pivitol_project_id" name="pivitol_project_id" value="<%= params.pivitol_project_id || '' %>" size="24"/></div>
+<div>Pivitol_api_key</div>
+<div><input type="text" id="pivitol_api_key" name="pivitol_api_key" value="<%= params.pivitol_api_key || '' %>" size="24"/></div>
+<input type="submit" value="Submit"/>
+</form>
